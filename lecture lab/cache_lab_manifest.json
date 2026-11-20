@@ -1,0 +1,208 @@
+{
+  "context": {
+    "git_username": "marzhansherekhan1823",
+    "student_id": "230109015",
+    "logical_cores": 20,
+    "cache_line_bytes": 64,
+    "cpu_model": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_signature": "AMD64::Intel64 Family 6 Model 154 Stepping 3, GenuineIntel::20::Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "instance_seed": 4986007202294715465,
+    "pinned_cores": null,
+    "cores_on_distinct_physical": false,
+    "affinity_supported": false,
+    "python": "3.14.0",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "config": {
+    "threads": 4,
+    "iterations_per_thread": 60000000,
+    "strides": [
+      1,
+      4,
+      8,
+      16
+    ],
+    "reps": 3,
+    "buffer_alignment_bytes": 128
+  },
+  "results": {
+    "stride_1": {
+      "elapsed_ns_median": 144026200,
+      "elapsed_ns_min": 143328900,
+      "elapsed_ns_runs": [
+        143328900,
+        144026200,
+        144289900
+      ],
+      "ns_per_update_per_thread": 2.4004366666666668,
+      "aggregate_ns_per_update": 0.6001091666666667,
+      "vol_ctx_switches": [
+        null,
+        null,
+        null
+      ],
+      "invol_ctx_switches": [
+        null,
+        null,
+        null
+      ],
+      "per_thread_ns_last_run": [
+        144050800,
+        143378600,
+        141657100,
+        141256900
+      ],
+      "stride": 1,
+      "stride_bytes": 8
+    },
+    "stride_4": {
+      "elapsed_ns_median": 146054100,
+      "elapsed_ns_min": 145279600,
+      "elapsed_ns_runs": [
+        145279600,
+        148826300,
+        146054100
+      ],
+      "ns_per_update_per_thread": 2.434235,
+      "aggregate_ns_per_update": 0.60855875,
+      "vol_ctx_switches": [
+        null,
+        null,
+        null
+      ],
+      "invol_ctx_switches": [
+        null,
+        null,
+        null
+      ],
+      "per_thread_ns_last_run": [
+        145778300,
+        143585200,
+        144225400,
+        143172300
+      ],
+      "stride": 4,
+      "stride_bytes": 32
+    },
+    "stride_8": {
+      "elapsed_ns_median": 142803700,
+      "elapsed_ns_min": 142001100,
+      "elapsed_ns_runs": [
+        142001100,
+        143412300,
+        142803700
+      ],
+      "ns_per_update_per_thread": 2.3800616666666667,
+      "aggregate_ns_per_update": 0.5950154166666667,
+      "vol_ctx_switches": [
+        null,
+        null,
+        null
+      ],
+      "invol_ctx_switches": [
+        null,
+        null,
+        null
+      ],
+      "per_thread_ns_last_run": [
+        137222400,
+        142709200,
+        138139000,
+        137430700
+      ],
+      "stride": 8,
+      "stride_bytes": 64
+    },
+    "stride_16": {
+      "elapsed_ns_median": 140108700,
+      "elapsed_ns_min": 139290400,
+      "elapsed_ns_runs": [
+        140160700,
+        140108700,
+        139290400
+      ],
+      "ns_per_update_per_thread": 2.335145,
+      "aggregate_ns_per_update": 0.58378625,
+      "vol_ctx_switches": [
+        null,
+        null,
+        null
+      ],
+      "invol_ctx_switches": [
+        null,
+        null,
+        null
+      ],
+      "per_thread_ns_last_run": [
+        136737500,
+        138623300,
+        137477200,
+        139162400
+      ],
+      "stride": 16,
+      "stride_bytes": 128
+    },
+    "private_baseline": {
+      "elapsed_ns_median": 30684200,
+      "elapsed_ns_min": 30229900,
+      "elapsed_ns_runs": [
+        30229900,
+        31475900,
+        30684200
+      ],
+      "ns_per_update_per_thread": 0.5114033333333333,
+      "aggregate_ns_per_update": 0.12785083333333333,
+      "vol_ctx_switches": [
+        null,
+        null,
+        null
+      ],
+      "invol_ctx_switches": [
+        null,
+        null,
+        null
+      ],
+      "per_thread_ns_last_run": [
+        29824400,
+        29685500,
+        29678400,
+        30534000
+      ]
+    }
+  },
+  "slowdown_stride1_vs_stride8": 1.0085607025588272,
+  "gil_experiment": {
+    "iters_per_thread": 1000000,
+    "one_thread_ns": 151920100,
+    "four_threads_ns": 582186300,
+    "slowdown_4_vs_1_thread": 3.8321874459008387
+  },
+  "audit": {
+    "expected_final_values": [
+      60000000,
+      240000000,
+      180000000,
+      120000000
+    ],
+    "bit_exact_per_layout": {
+      "stride_1": true,
+      "stride_4": true,
+      "stride_8": true,
+      "stride_16": true,
+      "private_baseline": true
+    },
+    "layouts_identical": true,
+    "parity_ok": true,
+    "llvm": {
+      "store_i64_count": 5,
+      "load_i64_count": 5,
+      "object_mode_calls": 0,
+      "signatures": [
+        "(Array(uint64, 1, 'C', False, aligned=True), int64, int64, int64)"
+      ],
+      "pyobject_in_signature": false
+    },
+    "llvm_ok": true
+  },
+  "verification_passed": true
+}
